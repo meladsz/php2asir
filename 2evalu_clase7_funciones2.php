@@ -18,4 +18,22 @@ funcsuma($num1, $num2, $num3);
 
 // programa que calcule la potencia de dos numeros
 // base y exponente
+function potencia($base, $exponente) {
+    $resultado = 1; // inicializamos
+
+    for ($i = 0; $i < $exponente; $i++) {
+        $resultado = $resultado * $base;
+    }
+
+    return $resultado;
+}
+
+// Generar números aleatorios
+$base = rand(1, 5);
+$exponente = rand(1, 4);
+
+// Mostrar datos y resultado
+echo "Base: " . $base . "<br>";
+echo "Exponente: " . $exponente . "<br>";
+echo "Resultado: " . potencia($base, $exponente);
 ?>
