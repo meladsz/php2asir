@@ -62,7 +62,7 @@ function recuadro($holamundo) {
 $holamundo = "Hola mundo";
 recuadro($holamundo);
 
-// funcion que reciba un numero entre 1-5 
+// funcion que reciba un numero entre 1-15
 //que diga si es mayor, menor o igual a 10
 function numeroale($numero) {
     if ($numero > 10) {
