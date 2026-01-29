@@ -16,26 +16,28 @@ echo $mensaje . "<br>";
 mostrarAsteriscos($mensaje);
 
 // programa que sea una pequeña calculadora, que reciba una operacion de 2 numeros sea multi, rest, sum,.. 
-function calculadora($num1, $num2, $operacion) {
-    if ($operacion == "+") {
-        return $num1 + $num2;
-    } elseif ($operacion == "-") {
-        return $num1 - $num2;
-    } elseif ($operacion == "*") {
-        return $num1 * $num2;
-    } elseif ($operacion == "/") {
-        return $num1 / $num2;
-    }
+function suma($num1, $num2) {
+    return $num1 + $num2;
+}
+function resta($num1, $num2) {
+    return $num1 - $num2;
+}
+function multiplicacion($num1, $num2) {
+    return $num1 * $num2;
+}
+function division($num1, $num2) {
+    return $num1 / $num2;
 }
 
 // programa principal
 $num1 = rand(1,10);
 $num2 = rand(1,10);
-$operacion = "*";
+$operacion = "multiplicacion"; // nombre de la función
 
-echo "Número 1: " . $num1 . "<br>";
+$resultado = $operacion($num1, $num2);
+
+echo "<br> Número 1: " . $num1 . "<br>";
 echo "Número 2: " . $num2 . "<br>";
 echo "Operación: " . $operacion . "<br>";
-echo "Resultado: " . calculadora($num1, $num2, $operacion);
-
+echo "Resultado: " . $resultado;
 ?>
