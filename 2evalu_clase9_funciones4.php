@@ -1,35 +1,26 @@
 <?php
 // rellenar un vector de numeros aleatorios no repetidos con FUNCIONES
 // parametro por referencia "&"
-/*
-$aux = $n1;
-$num1=$num2;
-$num2=$aux; */
-function numerosNoRepetidos($tamano) {     
-    $numeros = array();                         
 
-    while (count($numeros) < $tamano) {         
-        $aleatorio = rand(1, 10);               
-        $repetido = false;                  
-
-        for ($i = 0; $i < count($numeros); $i++) { 
-            if ($numeros[$i] == $aleatorio) {   
-                $repetido = true;  
-            }
-        }
-
-        if ($repetido == false) {               
-            $numeros[] = $aleatorio;             
+function compRepe($indi, $val) {
+    $repe = false;
+    for ($cont = 0; $cont<$indi;$cont++) {
+        if ($val[$cont]==$val[$indi]) {
+            $repe = true;
         }
     }
-
-    return $numeros;                           
+    return ($repe);
 }
-// programa principal 
-$vector = numerosNoRepetidos(5);         
-
-for ($i = 0; $i < count($vector); $i++) {
-    echo "Número: " . $vector[$i] . "<br>"; 
+?>
+<?php 
+$infe= 0;
+$supe= 6;
+for ($indi =0;$indi<6;$indi++) {
+    do {
+        $val[$indi]=rand($infe,$supe);
+    }
+    while (compRepe($indi, $val));
+    echo "Posición: " . ($indi+1) . " es " . $val[$indi] . "<br>";
 }
 
 ?>
