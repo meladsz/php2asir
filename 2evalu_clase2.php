@@ -15,30 +15,30 @@ $nume = array();
 $sacadas = 5;
 $min = 1;
 $max = 12;
-$contNoRe = 0;
-$reco = 0;
-$rep = "N";
+$posi = 0;
+$rep = false; 
 
-while ($contNoRe < $sacadas) {
+while ($posi < $sacadas) {
   
-    $nume[$contNoRe] = rand($min, $max);
+    $nume[$posi] = rand($min, $max);
 
-    $rep = "N";
-    $reco = 0;
+    $rep = false;   // ← REINICIAR bandera
+    $reco = 0;      // ← REINICIAR recorrido
 
     // Comprobar repetidos
-    while ($reco < $contNoRe) {
-        if ($nume[$contNoRe] == $nume[$reco]) {
-            $rep = "S";
+    while ($reco < $posi) {
+        if ($nume[$posi] == $nume[$reco]) {
+            $rep = true; 
         }
         $reco++;
     }
 
     // Si no está repetido, avanzar
-    if ($rep == "N") {
-        echo "Aleatorio = " . $nume[$contNoRe] . "<br>";
-        $contNoRe++;
+    if ($rep == false) { 
+        echo "Aleatorio = " . $nume[$posi] . "<br>";
+        $posi++;
     }
 }
+
 
 ?>
