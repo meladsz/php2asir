@@ -74,7 +74,15 @@ if ($resultado == "OK") {
 ?>
 
 <?php
-
+/*
+Realizar un programa que teniendo un vector de números + y negativos obtenga dos vectores uno solo con positivos y otro con negativos
+*Tendrá una  función que rellene  con valores aleatorios 1 vector pasado por referencia
+* Tendrá una función que reciba un vector con números + y - y devuelve por referencia 2 vectores uno con positivos y otro con negativos.
+* Tendrá una función que imprimirá los 3 vectores con mensajes  
+                 completo:   ______
+                 pares _____
+                 impares _____
+    */
 // Rellenar vectores
 function rellenarVectores(&$v, $tam) {
     for ($i = 0; $i < $tam; $i++) {
@@ -138,7 +146,11 @@ imprimirVectores($vector, $vecPos, $vecNeg);
 ?>
 
 <?php
-
+/*
+Realizar un programa que de un vector con valores aleatorios 
+devuelva indique cual es el máximo, el mínimo y las posición en la que se encuentran. 
+"Tu decides la modularización del programa"
+    */
 // buscar min y max
 function buscarMinMax($v, &$min, &$posMin, &$max, &$posMax) {
     $min = $v[0];
@@ -184,7 +196,9 @@ imprimirResultados($vector, $min, $posMin, $max, $posMax);
 ?>
 
 <?php
-
+/*
+Modificar el programa anterior para que en caso de tener varios mínimos o varios máximos, devuelva todos
+*/
 // buscar min y max con duplicados
 function buscarMinMaxTodos($v, &$min, &$vecPosMin, &$max, &$vecPosMax) {
     $min = $v[0];
@@ -243,3 +257,4 @@ buscarMinMaxTodos($vector, $min, $vecPosMin, $max, $vecPosMax);
 imprimirResultadosTodos($vector, $min, $vecPosMin, $max, $vecPosMax);
 
 ?>
+
