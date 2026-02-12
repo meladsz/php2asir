@@ -3,7 +3,6 @@
 Realizar un programa que cuente los números pares /impares de un vector
 función que rellene  con valores aleatorios 1 vector pasado por referencia
 -devuelva por retorno un ko si hay algún cero en el vector y si no devolverá ok
--devolverá pero por referencia el número de elementos positivos y negativos
 - 1 función imprimirá el vector si el valor es ok, y el número de pares e impares
 */
 // Rellenar vector
@@ -14,31 +13,18 @@ function rellenarVector(&$v, $tam) {
 }
 
 // Contar
-function contarDatos($v, &$positivos, &$negativos, &$pares, &$impares) {
+function contarDatos($v, &$pares, &$impares) {
 
-    $positivos = 0;
-    $negativos = 0;
     $pares = 0;
     $impares = 0;
-
-    foreach ($v as $n) {
-
-        if ($n == 0) {
-            return "KO";
+    
         }
-
-        if ($n > 0) $positivos++;
-        if ($n < 0) $negativos++;
-
         if ($n % 2 == 0) {
             $pares++;
         } else {
             $impares++;
         }
     }
-
-    return "OK";
-}
 
 // Imprimir
 function imprimirVector($v, $pares, $impares) {
@@ -60,7 +46,7 @@ $vector = array ();
 
 rellenarVector($vector, $tam);
 
-$resultado = contarDatos($vector, $pos, $neg, $pares, $impares);
+$resultado = contarDatos($vector, $pares, $impares);
 
 if ($resultado == "OK") {
 
@@ -257,4 +243,5 @@ buscarMinMaxTodos($vector, $min, $vecPosMin, $max, $vecPosMax);
 imprimirResultadosTodos($vector, $min, $vecPosMin, $max, $vecPosMax);
 
 ?>
+
 
