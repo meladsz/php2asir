@@ -96,11 +96,11 @@ function separarVector($v, &$positivos, &$negativos) {
 }
 
 // Imprimir
-function imprimirVectores($completo, $positivos, $negativos) {
+function imprimirVectores($v, $positivos, $negativos) {
 
     echo "Completo: ";
-    for ($i = 0; $i < count($completo); $i++) {
-        echo $completo[$i] . " ";
+    for ($i = 0; $i < count($v); $i++) {
+        echo $v[$i] . " ";
     }
 
     echo "<br>Positivos: ";
@@ -241,6 +241,7 @@ buscarMinMaxTodos($vector, $min, $vecPosMin, $max, $vecPosMax);
 imprimirResultadosTodos($vector, $min, $vecPosMin, $max, $vecPosMax);
 
 ?>
+
 
 
 
