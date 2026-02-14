@@ -51,8 +51,6 @@ $resultado = contarDatos($vector, $pares, $impares);
 if ($resultado == "OK") {
 
     imprimirVector($vector, $pares, $impares);
-    echo "<br>Positivos: $pos";
-    echo "<br>Negativos: $neg";
 
 } else {
     echo "KO — hay al menos un cero en el vector";
@@ -66,8 +64,8 @@ Realizar un programa que teniendo un vector de números + y negativos obtenga do
 * Tendrá una función que reciba un vector con números + y - y devuelve por referencia 2 vectores uno con positivos y otro con negativos.
 * Tendrá una función que imprimirá los 3 vectores con mensajes  
                  completo:   ______
-                 pares _____
-                 impares _____
+                 positivos _____
+                 negativos _____
     */
 // Rellenar vectores
 function rellenarVectores(&$v, $tam) {
@@ -243,5 +241,6 @@ buscarMinMaxTodos($vector, $min, $vecPosMin, $max, $vecPosMax);
 imprimirResultadosTodos($vector, $min, $vecPosMin, $max, $vecPosMax);
 
 ?>
+
 
 
